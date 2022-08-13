@@ -4,6 +4,8 @@
 		"paths": {
 			"@/features/*": ["features/*"],
 			"@/shared/*": ["shared/*"],
+			"@/types/*": ["types/*"],
+			"@/utils/*": ["utils/*"],
 			"@/styles/*": ["styles/*"]
 		},
 		"target": "es5",

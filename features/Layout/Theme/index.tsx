@@ -1,25 +1,46 @@
 import React, { FC } from 'react'
-import { ThemeProvider } from 'styled-components'
+import { DefaultTheme, ThemeProvider } from 'styled-components'
+import { ThemeType } from '@/types/Theme'
+import { themeConstants } from '@/utils/const/themeconstants'
 
 interface Props {
 	children: React.ReactNode
 }
 
-const lightTheme = {
-	// colors
+const lightTheme: DefaultTheme = {
+	fontsize: {
+		xs: '10px',
+		sm: '12px',
+		md: '14px',
+		lg: '16px'
+	},
+	sizes: {
+		imageCircle: '65px',
+		iconSize: '24px'
+	},
 	colors: {
-		primary: '#0070f3',
-		secondary: '#f3f3f3',
-		tertiary: '#f3f3f3',
-		quaternary: '#f3f3f3',
-		quinary: '#f3f3f3',
-		senary: '#f3f3f3',
-		septenary: '#f3f3f3',
-		octonary: '#f3f3f3',
-		nonary: '#f3f3f3'
+		background: '#fff',
+		primaryFontColor: '#262626',
+		secondaryFontColor: '#8e8e8e',
+		tertiaryFontColor: '#0095f6'
+	}
+}
+
+const darkTheme: DefaultTheme = {
+	...lightTheme,
+	colors: {
+		...lightTheme.colors,
+		background: '#000',
+		primaryFontColor: '#fff'
 	}
 }
 
 export const Theme: FC<Props> = ({ children }) => {
-	return <ThemeProvider theme={lightTheme}>{children}</ThemeProvider>
+	const prefereredTheme: ThemeType =
+		globalThis.localStorage?.getItem('theme') || themeConstants.light
+
+	const theme =
+		prefereredTheme === themeConstants.light ? lightTheme : darkTheme
+
+	return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
