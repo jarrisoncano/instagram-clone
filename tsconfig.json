@@ -6,7 +6,9 @@
 			"@/shared/*": ["shared/*"],
 			"@/types/*": ["types/*"],
 			"@/utils/*": ["utils/*"],
-			"@/styles/*": ["styles/*"]
+			"@/styles/*": ["styles/*"],
+			"@/assets/*": ["assets/*"],
+			"@/icons/*": ["assets/icons/*"]
 		},
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
