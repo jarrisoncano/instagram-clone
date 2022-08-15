@@ -1,11 +1,13 @@
 import React from 'react'
 import type { NextPage } from 'next'
+import { Navbar } from '@/features/Navbar/'
 import { Container } from '@/features/Layout/Container'
 
 const Home: NextPage = () => {
 	return (
 		<Container maxWidth='970'>
 			{/* Header */}
+			<Navbar />
 			{/* Home */}
 			{/* 	Content */}
 			{/* 		MainContent */}
@@ -18,10 +20,6 @@ const Home: NextPage = () => {
 			{/* explorer */}
 			{/* likes */}
 			{/* profiles */}
-			<div>
-				<h1>Hello Next.js</h1>
-			</div>
-			<div></div>
 		</Container>
 	)
 }
