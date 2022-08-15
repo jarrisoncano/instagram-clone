@@ -16,6 +16,7 @@ declare module 'styled-components' {
 			iconSize: string
 		}
 		colors: {
+			border: string
 			background: string
 			primaryFontColor: string
 			secondaryFontColor: string
