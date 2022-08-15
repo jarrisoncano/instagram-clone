@@ -8,6 +8,9 @@ interface Props {
 }
 
 const lightTheme: DefaultTheme = {
+	mediaQueries: {
+		screenBreakpoint: '1024px'
+	},
 	fontsize: {
 		xs: '10px',
 		sm: '12px',
@@ -20,6 +23,7 @@ const lightTheme: DefaultTheme = {
 	},
 	colors: {
 		background: '#fff',
+		border: '#e5e5e5',
 		primaryFontColor: '#262626',
 		secondaryFontColor: '#8e8e8e',
 		tertiaryFontColor: '#0095f6'

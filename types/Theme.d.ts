@@ -5,6 +5,9 @@ export type ThemeType = themeConstants.light | themeConstants.dark
 
 declare module 'styled-components' {
 	export interface DefaultTheme {
+		mediaQueries: {
+			screenBreakpoint: string
+		}
 		fontsize: {
 			xs: string
 			sm: string
